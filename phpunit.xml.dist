@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit bootstrap="./tests/bootstrap.php" colors="true">
+    <testsuite name="MercyfulFate Test Suite">
+        <directory>./tests/library</directory>
+    </testsuite>
+    <filter>
+        <whitelist>
+            <directory suffix=".php">./library/Payment</directory>
+        </whitelist>
+    </filter>
+</phpunit>
