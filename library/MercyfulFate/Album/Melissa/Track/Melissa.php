@@ -2,24 +2,28 @@
 
 namespace MercyfulFate\Album\Melissa\Track;
 
+use MercyfulFate\KingDiamond;
+use MercyfulFate\Witch\Melissa as Witch;
+use MercyfulFate\Priest;
+
 class Melissa
 {
     /**
-     * @var MercyfulFate\KingDiamond
+     * @var KingDiamond
      */
     protected $king;
 
     /**
-     * @var MercyfulFate\Priest
+     * @var Priest
      */
     protected $priest;
 
     /**
-     * @var MercyfulFate\Witch\Melissa
+     * @var Witch
      */
     protected $melissa;
     
-    public function __construct(\MercyfulFate\KingDiamond $king, \MercyfulFate\Witch\Melissa $melissa, \MercyfulFate\Priest $priest)
+    public function __construct(KingDiamond $king, Witch $melissa, Priest $priest)
     {
         $this->king = $king;
         $this->melissa = $melissa;
