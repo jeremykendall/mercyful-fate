@@ -10,5 +10,5 @@ class Melissa extends Witch
     {
         parent::__construct($burned);
     }
-    
+
 }

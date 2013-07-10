@@ -7,11 +7,11 @@ class KingDiamond implements \SplObserver
 
     /**
      * Does King swear revenge upon the priest?
-     * 
-     * @var bool; 
+     *
+     * @var bool;
      */
     private $swearsRevenge;
-    
+
     public function __construct($swearsRevenge = false)
     {
         $this->swearsRevenge = $swearsRevenge;
@@ -19,7 +19,7 @@ class KingDiamond implements \SplObserver
 
     /**
      * Does King swear revenge upon the priest?
-     * 
+     *
      * @returns bool
      */
     public function swearsRevenge()
@@ -29,8 +29,8 @@ class KingDiamond implements \SplObserver
 
     /**
      * If notified, King will swear revenge
-     * 
-     * @param \SplSubject $subject 
+     *
+     * @param \SplSubject $subject
      */
     public function update(\SplSubject $subject)
     {

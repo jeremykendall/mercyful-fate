@@ -14,8 +14,8 @@ class Priest implements \SplSubject
 
     /**
      * Burn the witch! Burn her! Burn her!
-     * 
-     * @param Witch $witch 
+     *
+     * @param  Witch $witch
      * @return void
      */
     public function burnAtStake(Witch $witch)

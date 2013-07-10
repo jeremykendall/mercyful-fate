@@ -38,7 +38,7 @@ class MelissaTest extends \PHPUnit_Framework_TestCase
         $this->witch = new WitchMelissa();
         $this->trackMelissa = new TrackMelissa($this->king, $this->witch, $this->priest);
     }
-    
+
     protected function tearDown()
     {
         $this->trackMelissa = null;
@@ -50,7 +50,7 @@ class MelissaTest extends \PHPUnit_Framework_TestCase
         $this->assertFalse($this->king->swearsRevenge());
 
         $this->trackMelissa->priestBurnsWitch();
-        
+
         $this->assertTrue($this->witch->isBurned());
         $this->assertTrue($this->king->swearsRevenge());
     }

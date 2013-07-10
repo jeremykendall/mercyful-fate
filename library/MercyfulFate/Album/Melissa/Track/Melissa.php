@@ -22,14 +22,14 @@ class Melissa
      * @var Witch
      */
     protected $melissa;
-    
+
     public function __construct(KingDiamond $king, Witch $melissa, Priest $priest)
     {
         $this->king = $king;
         $this->melissa = $melissa;
         $this->priest = $priest;
     }
-    
+
     public function priestBurnsWitch()
     {
         $this->priest->burnAtStake($this->melissa);
