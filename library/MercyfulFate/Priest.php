@@ -15,12 +15,10 @@ class Priest implements \SplSubject
     /**
      * Burn the witch! Burn her! Burn her!
      *
-     * @param  Witch $witch
      * @return void
      */
-    public function burnAtStake(Witch $witch)
+    public function burnWitchAtStake()
     {
-        $witch->setBurned(true);
         $this->notify();
     }
 
@@ -38,8 +36,7 @@ class Priest implements \SplSubject
     }
 
     /**
-     * Detaches the SplObserver from the Priest so it will no longer be
-     * notified when a witch is burned
+     * Detaches the SplObserver
      *
      * @param \SplObserver The observer to detach
      * @return void
@@ -51,7 +48,7 @@ class Priest implements \SplSubject
     }
 
     /**
-     * Notify all observers of the witch burning
+     * Notify all observers
      *
      * @return void
      */
