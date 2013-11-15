@@ -4,54 +4,59 @@ namespace MercyfulFate\Album\Melissa\Track;
 
 use MercyfulFate\KingDiamond;
 use MercyfulFate\Priest;
-use MercyfulFate\Witch\Melissa as WitchMelissa;
+use MercyfulFate\Witch;
 use MercyfulFate\Album\Melissa\Track\Melissa as TrackMelissa;
 
 class MelissaTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
-     * @var MercyfulFate\KingDiamond
+     * @var KingDiamond
      */
     protected $king;
 
     /**
-     * @var MercyfulFate\Priest
+     * @var Priest
      */
     protected $priest;
 
     /**
-     * @var MercyfulFate\Witch\Melissa
+     * @var Witch
      */
     protected $witch;
 
     /**
-     * @var MercyfulFate\Album\Melissa\Track\Melissa
+     * @var Melissa The song
      */
-    protected $trackMelissa;
+    protected $track;
 
     protected function setUp()
     {
         $this->king = new KingDiamond();
+        $this->witch = new Witch('Melissa');
         $this->priest = new Priest();
         $this->priest->attach($this->king);
-        $this->witch = new WitchMelissa();
-        $this->trackMelissa = new TrackMelissa($this->king, $this->witch, $this->priest);
+        $this->priest->attach($this->witch);
+
+        $this->track = new TrackMelissa($this->king, $this->witch, $this->priest);
     }
 
     protected function tearDown()
     {
-        $this->trackMelissa = null;
+        $this->track = null;
     }
 
     public function testBurnMelissa()
     {
+        $this->assertEquals('Melissa', $this->witch->getName());
         $this->assertFalse($this->witch->isBurned());
+        $this->assertFalse($this->witch->isEnteredAnotherLife());
         $this->assertFalse($this->king->swearsRevenge());
 
-        $this->trackMelissa->priestBurnsWitch();
+        $this->track->priestBurnsWitchAtStake();
 
         $this->assertTrue($this->witch->isBurned());
+        $this->assertTrue($this->witch->isEnteredAnotherLife());
         $this->assertTrue($this->king->swearsRevenge());
     }
 
