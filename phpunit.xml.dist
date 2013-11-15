@@ -3,4 +3,20 @@
     <testsuite name="MercyfulFate Test Suite">
         <directory>./tests/library</directory>
     </testsuite>
+
+    <filter>
+        <whitelist>
+            <directory suffix=".php">./library</directory>
+        </whitelist>
+    </filter>
+
+    <logging>
+        <log type="coverage-html" 
+            target="build/coverage" 
+            charset="UTF-8" 
+            yui="true" 
+            highlight="true" 
+            lowUpperBound="40"
+            highLowerBound="70" />
+    </logging>
 </phpunit>
