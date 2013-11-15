@@ -1,6 +1,6 @@
 <?php
 
-namespace MercyfulFate\Album\Melissa\Track;
+namespace MercyfulFate\Tests\Album\Melissa\Track;
 
 use MercyfulFate\KingDiamond;
 use MercyfulFate\Priest;
