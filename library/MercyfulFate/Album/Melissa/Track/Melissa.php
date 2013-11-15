@@ -3,7 +3,7 @@
 namespace MercyfulFate\Album\Melissa\Track;
 
 use MercyfulFate\KingDiamond;
-use MercyfulFate\Witch\Melissa as Witch;
+use MercyfulFate\Witch;
 use MercyfulFate\Priest;
 
 class Melissa
@@ -30,8 +30,8 @@ class Melissa
         $this->priest = $priest;
     }
 
-    public function priestBurnsWitch()
+    public function priestBurnsWitchAtStake()
     {
-        $this->priest->burnAtStake($this->melissa);
+        $this->priest->burnWitchAtStake();
     }
 }
