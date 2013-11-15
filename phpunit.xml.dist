@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <phpunit bootstrap="./vendor/autoload.php" colors="true">
     <testsuite name="MercyfulFate Test Suite">
-        <directory>./tests/library</directory>
+        <directory>./tests/MercyfulFate</directory>
     </testsuite>
 
     <filter>
         <whitelist>
-            <directory suffix=".php">./library</directory>
+            <directory suffix=".php">./src</directory>
         </whitelist>
     </filter>
 

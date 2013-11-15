@@ -8,7 +8,7 @@
     "autoload": {
         "psr-0": 
             {
-            "MercyfulFate\\": "library/"
+            "MercyfulFate\\": "src/"
         }
     }
 }
