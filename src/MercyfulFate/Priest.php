@@ -59,4 +59,13 @@ class Priest implements \SplSubject
         }
     }
 
+    /**
+     * Gets observers
+     *
+     * @return array Observers
+     */
+    public function getObservers()
+    {
+        return $this->observers;
+    }
 }
