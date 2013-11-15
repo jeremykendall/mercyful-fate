@@ -60,4 +60,19 @@ class MelissaTest extends \PHPUnit_Framework_TestCase
         $this->assertTrue($this->king->swearsRevenge());
     }
 
+    public function testGetLyrics()
+    {
+        $lyrics = $this->track->getLyrics();
+        $this->assertInternalType('string', $lyrics);
+        $this->assertContains('Melissa, you were the queen of the night', $lyrics);
+        $this->assertContains('Melissa has entered another life', $lyrics);
+    }
+
+    public function testGetLyricsSource()
+    {
+        $this->assertEquals(
+            'http://www.darklyrics.com/lyrics/mercyfulfate/melissa.html#7',
+            $this->track->getLyricsSource()
+        );
+    }
 }
